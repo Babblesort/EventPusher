@@ -1,5 +1,8 @@
-<ul>
-	{{#each items as |item|}}
+{{#each groupKeys as |key|}}
+	<h4>Group: {{key}} - {{idx}}</h4>
+	<ul>
+	{{#each (group-lookup groups key) as |item|}}
 		<li>{{item.displayId}}</li>
 	{{/each}}
-</ul>
+	</ul>
+{{/each}}

@@ -11,5 +11,6 @@ export default DS.Model.extend({
 	isBad: attr('boolean', { defaultValue: false }),
 	displayId: Ember.computed('id', function() {
 		return `whatsit:${this.get('id')}`;
-	})
+	}),
+	groupKey: attr('string', { defaultValue: 'A'})
 });

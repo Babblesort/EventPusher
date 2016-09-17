@@ -7,24 +7,43 @@ export default Ember.Route.extend({
 			name: 'foo',
 			rating: 3,
 			isGood: false,
-			isBad: true
+			isBad: true,
+			groupKey: 'A'
 		});
 		this.store.createRecord('whatsit', {
 			id: '2',
 			name: 'bar',
 			rating: 9,
 			isGood: true,
-			isBad: false
+			isBad: false,
+			groupKey: 'B'
 		});
 		this.store.createRecord('whatsit', {
 			id: '3',
 			name: 'baz',
 			rating: 5,
 			isGood: false,
-			isBad: false
+			isBad: false,
+			groupKey: 'D'
+		});
+		this.store.createRecord('whatsit', {
+			id: '4',
+			name: 'baz',
+			rating: 5,
+			isGood: false,
+			isBad: false,
+			groupKey: 'C'
+		});
+		this.store.createRecord('whatsit', {
+			id: '5',
+			name: 'baz',
+			rating: 5,
+			isGood: false,
+			isBad: false,
+			groupKey: 'C'
 		});
 	},
 	model() {
-		return this.store.findAll('whatsit');
+		return this.store.peekAll('whatsit');
 	}
 });
