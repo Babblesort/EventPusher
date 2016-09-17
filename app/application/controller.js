@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
 	model: null,
 	alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 	randomRating() {
-		return Math.floor(Math.random() * 10);
+		return Math.floor(Math.random() * 10) + 1;
 	},
 	randomLetter() {
 		const letterIndex = Math.floor(Math.random() * this.get('alphabet').length);
