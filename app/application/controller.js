@@ -16,16 +16,18 @@ export default Ember.Controller.extend({
 			if(this.get('allowRun')) {
 				this.send('addOne');
 			}
-		}, 50)
+		}, 10)
   }),
+  nextId: 100,
 	actions: {
 		addOne() {
-			const nextId = this.get('model.length') + 1;
+			let next = this.get('nextId');
 			this.store.createRecord('whatsit', {
-				id: nextId,
+				id: next,
 				rating: this.randomRating(),
 				groupKey: this.randomLetter()
 			});
+			this.set('nextId', ++next);
 		},
 		stop() {
 			this.set('allowRun', false);
