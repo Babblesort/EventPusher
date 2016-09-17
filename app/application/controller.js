@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 		const letterIndex = Math.floor(Math.random() * this.get('alphabet').length);
 		return this.get('alphabet').charAt(letterIndex);
 	},
-	allowRun: true,
+	allowRun: false,
 	perpetualAdds: Ember.on('init', function() {
 		setInterval(() => {
 			if(this.get('allowRun')) {
