@@ -23,10 +23,7 @@ export default Ember.Controller.extend({
 			const nextId = this.get('model.length') + 1;
 			this.store.createRecord('whatsit', {
 				id: nextId,
-				name: `bar${nextId}`,
 				rating: this.randomRating(),
-				isGood: false,
-				isBad: false,
 				groupKey: this.randomLetter()
 			});
 		},
