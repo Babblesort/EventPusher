@@ -9,19 +9,5 @@ export default Ember.Component.extend({
 	}),
 	groupKeys: Ember.computed('groups.[]', function() {
 		return _.keys(this.get('groups')).sort();
-	}),
-	nextId: 10,
-	actions: {
-		addOne() {
-			this.get('store').createRecord('whatsit', {
-				id: this.get('nextId'),
-				name: `bar${this.get('nextId')}`,
-				rating: 5,
-				isGood: false,
-				isBad: false,
-				groupKey: 'B'
-			});
-			this.set('nextId', this.get('nextId') + 1);
-		}
-	}
+	})
 });
