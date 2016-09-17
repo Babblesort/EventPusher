@@ -2,9 +2,7 @@
 	<h4>Group {{key}}</h4>
 	<ul>
 	{{#each (group-lookup groups key) as |item|}}
-		<li>
-			{{item.displayId}} --- {{item.name}} {{item.rating}}
-		</li>
+		{{whatsit-item item=item}}
 	{{/each}}
 	</ul>
 {{/each}}
