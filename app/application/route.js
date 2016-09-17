@@ -28,18 +28,18 @@ export default Ember.Route.extend({
 		});
 		this.store.createRecord('whatsit', {
 			id: '4',
-			name: 'baz',
-			rating: 5,
-			isGood: false,
+			name: 'qux',
+			rating: 9,
+			isGood: true,
 			isBad: false,
 			groupKey: 'C'
 		});
 		this.store.createRecord('whatsit', {
 			id: '5',
-			name: 'baz',
-			rating: 5,
+			name: 'wiz',
+			rating: 2,
 			isGood: false,
-			isBad: false,
+			isBad: true,
 			groupKey: 'C'
 		});
 	},

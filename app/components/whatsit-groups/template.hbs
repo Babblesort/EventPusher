@@ -1,8 +1,10 @@
 {{#each groupKeys as |key|}}
-	<h4>Group: {{key}}</h4>
+	<h4>Group {{key}}</h4>
 	<ul>
 	{{#each (group-lookup groups key) as |item|}}
-		<li>{{item.displayId}}</li>
+		<li>
+			{{item.displayId}} --- {{item.name}} {{item.rating}}
+		</li>
 	{{/each}}
 	</ul>
 {{/each}}
